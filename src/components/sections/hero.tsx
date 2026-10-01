@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-            <span className="bg-gradient-to-r from-primary via-primary to-blue-600 bg-clip-text text-transparent">
+            <span className="text-brand-gradient">
               {tagline}
             </span>
           </h1>

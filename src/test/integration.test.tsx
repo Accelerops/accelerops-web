@@ -54,7 +54,7 @@ describe('Integration Tests', () => {
       render(<HomePage />);
       
       // Header with navigation
-      expect(screen.getByText('AccelerOps')).toBeInTheDocument();
+      expect(screen.getByRole('img', { name: /accelerops/i })).toBeInTheDocument();
       expect(screen.getByText('Services')).toBeInTheDocument();
       expect(screen.getByText('Methodology')).toBeInTheDocument();
       expect(screen.getByText('Blog')).toBeInTheDocument();
@@ -161,9 +161,10 @@ describe('Integration Tests', () => {
     it('includes logo that scrolls to top', () => {
       render(<HomePage />);
       
-      const logoButton = screen.getByRole('button', { name: /scroll to top/i });
+      const logoButton = screen.getByRole('button', { name: /accelerops home/i });
       expect(logoButton).toBeInTheDocument();
-      expect(logoButton).toHaveTextContent('AccelerOps');
+      const logoImage = screen.getByRole('img', { name: /accelerops/i });
+      expect(logoImage).toBeInTheDocument();
     });
 
     it('renders all navigation items', () => {

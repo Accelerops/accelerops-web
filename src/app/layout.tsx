@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   creator: 'AccelerOps',
   publisher: 'AccelerOps',
   robots: 'index, follow',
+  metadataBase: new URL('https://accelerops.com'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -28,11 +29,20 @@ export const metadata: Metadata = {
     title: 'AccelerOps - Accelerate Your Digital Transformation',
     description: 'Elite consulting firm specializing in modern infrastructure practices.',
     siteName: 'AccelerOps',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'AccelerOps - Accelerate Your Digital Transformation',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AccelerOps - Accelerate Your Digital Transformation',
     description: 'Elite consulting firm specializing in modern infrastructure practices.',
+    images: ['/og-image.png'],
   },
 };
 

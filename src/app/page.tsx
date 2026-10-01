@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Navigation } from '@/components/ui/navigation';
 import { Hero } from '@/components/sections/hero';
@@ -36,9 +37,16 @@ export default function HomePage() {
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-              aria-label="Scroll to top"
+              aria-label="AccelerOps home"
             >
-              <div className="text-xl font-bold text-primary">AccelerOps</div>
+              <Image
+                src="/logo.png"
+                alt="AccelerOps"
+                width={480}
+                height={333}
+                priority
+                className="h-10 w-auto"
+              />
             </button>
             <Navigation items={NAVIGATION_ITEMS} />
           </div>
